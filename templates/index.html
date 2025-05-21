@@ -1,1 +1,45 @@
 
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BETBOX - ניתוח משחקי כדורסל חיים</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BETBOX - ניתוח משחקי כדורסל חיים</h1>
+            <div class="header-actions">
+                <button id="refresh-button" class="refresh-button">
+                    <i class="fas fa-sync-alt"></i> רענון נתונים
+                </button>
+                <div class="stats-container" id="stats-container">
+                    <!-- סטטיסטיקות יתמלאו כאן באמצעות JavaScript -->
+                    <div class="stat-item">
+                        <div class="stat-value" id="total-live">0</div>
+                        <div class="stat-label">משחקים חיים</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="opportunity-percentage">0%</div>
+                        <div class="stat-label">הזדמנויות</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main id="games-container">
+            <!-- תוכן המשחקים יתמלא כאן באמצעות JavaScript -->
+            <div class="loading">טוען משחקים...</div>
+        </main>
+        
+        <footer>
+            <p>© 2025 BETBOX - כל הזכויות שמורות</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
